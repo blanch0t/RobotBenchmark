@@ -8,11 +8,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from time import sleep
 from pyautogui import write
+import os
 
 class Bot():
 
     def __init__(self):
-        S = Service("C:\\Users\\tblch\\github\\geoGuessrStatBot\\chromedriver.exe")
+        S = Service(os.path.join(os.path.dirname(__file__), "chromedriver.exe"))
         brave_path = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
 
         options = Options()
